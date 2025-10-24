@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prácticas JavaScript - Prototipos y Herencia</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fce4ec; /* Un rosa pastel muy suave */
+            margin: 0;
+            padding: 30px;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #e91e63; /* Un rosa vibrante */
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: #d81b60; /* Rosa un poco más oscuro */
+            border-bottom: 3px solid #f48fb1; /* Borde inferior rosa suave */
+            padding-bottom: 15px;
+            margin-top: 50px;
+            font-size: 1.8em;
+        }
+        h3 {
+            color: #c2185b; /* Rosa oscuro */
+            margin-top: 35px;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            border-left: 5px solid #ff80ab; /* Barra rosa al lado del subtítulo */
+            padding-left: 10px;
+        }
+        .section-box {
+            background-color: #fff8f9; /* Fondo muy claro para cada sección */
+            border: 1px solid #f8bbd0; /* Borde rosa claro */
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        .section-box p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        .code-snippet {
+            background-color: #f5f5f5;
+            border: 1px solid #eee;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+            color: #444;
+        }
+        .console-output {
+            background-color: #263238; /* Azul oscuro para la consola */
+            color: #a7ffeb; /* Verde azulado claro para texto */
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+            font-size: 0.85em;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            max-height: 250px; /* Altura limitada */
+            overflow-y: auto; /* Scroll vertical */
+            border-left: 5px solid #80deea; /* Borde decorativo */
+        }
+        .console-output strong {
+            color: #ffffff;
+        }
+        .result-dom {
+            margin-top: 20px;
+            padding: 18px;
+            background-color: #e0f7fa; /* Azul muy claro para resultados DOM */
+            border-left: 6px solid #00bcd4; /* Borde turquesa */
+            border-radius: 8px;
+            font-weight: bold;
+            color: #00796b; /* Verde azulado oscuro */
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+        }
+        .note {
+            background-color: #fffde7; /* Amarillo muy claro */
+            border-left: 5px solid #ffd600; /* Borde amarillo brillante */
+            padding: 15px;
+            margin-top: 25px;
+            margin-bottom: 30px;
+            color: #b79c00;
+            border-radius: 8px;
+            font-size: 0.95em;
+        }
+        .note strong {
+            color: #927b00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prácticas de JavaScript.info - Prototipos y Herencia</h1>
+        <p class="note">
+            <strong>Instrucciones Importantes:</strong><br>
+            Para ver la salida completa y detallada de los ejemplos, por favor, abre la consola de tu navegador.
+            Puedes hacerlo presionando `F12` (en Windows/Linux) o `Cmd + Opt + I` (en macOS).
+            Recarga la página después de abrir la consola para asegurarte de que todos los logs se capturen correctamente.
+        </p>
+
+        <h2>8. Prototipos, Herencia</h2>
+
+        <!-- Sección para 8.1 Herencia Prototípica -->
+        <section id="tema-8-1" class="section-box">
+            <h3>8.1 Herencia Prototípica</h3>
+            <p>
+                Este apartado fundamental en JavaScript explora cómo los objetos pueden heredar propiedades y métodos de otros objetos.
+                A diferencia de la herencia basada en clases de otros lenguajes, JavaScript utiliza un mecanismo de "cadena de prototipos".
+                Cuando se intenta acceder a una propiedad de un objeto, si esta no se encuentra directamente en él,
+                JavaScript busca la propiedad en el prototipo de ese objeto, y luego en el prototipo del prototipo, y así sucesivamente,
+                hasta llegar a <code>null</code>.
+            </p>
+            <div id="output-8-1" class="console-output">
+                <strong>Salida de Consola (8.1):</strong><br>
+                Aquí se mostrarán los logs de `console.log` para la sección 8.1.
+            </div>
+            <div id="result-8-1" class="result-dom">
+                <strong>Resultados en el DOM (8.1):</strong><br>
+                <!-- Los resultados generados dinámicamente para el DOM en 8.1 aparecerán aquí. -->
+            </div>
+        </section>
+
+        <!-- Sección para 8.2 Prototipo F (funciones constructoras) -->
+        <section id="tema-8-2" class="section-box">
+            <h3>8.2 Prototipo F</h3>
+            <p>
+                Cuando trabajamos con funciones constructoras (por ejemplo, <code>function Persona() {...}</code>),
+                cada función en JavaScript tiene una propiedad especial llamada <code>prototype</code> (F.prototype).
+                Esta propiedad es un objeto y es donde se definen los métodos que serán heredados por todas las instancias
+                creadas con esa función constructora usando la palabra clave <code>new</code>.
+                Esto permite que todas las instancias compartan los mismos métodos, ahorrando memoria y fomentando la herencia.
+            </p>
+            <div id="output-8-2" class="console-output">
+                <strong>Salida de Consola (8.2):</strong><br>
+                Aquí se mostrarán los logs de `console.log` para la sección 8.2.
+            </div>
+            <div id="result-8-2" class="result-dom">
+                <strong>Resultados en el DOM (8.2):</strong><br>
+                <!-- Los resultados generados dinámicamente para el DOM en 8.2 aparecerán aquí. -->
+            </div>
+        </section>
+
+        <!-- Sección para 8.3 Prototipos Nativos -->
+        <section id="tema-8-3" class="section-box">
+            <h3>8.3 Prototipos Nativos</h3>
+            <p>
+                JavaScript viene con una serie de objetos y constructores "nativos" (incorporados) como <code>Object</code>,
+                <code>Array</code>, <code>Function</code>, <code>String</code>, <code>Number</code>, <code>Date</code>, etc.
+                Cada uno de estos tiene su propio prototipo (ej., <code>Array.prototype</code>, <code>String.prototype</code>)
+                que contiene los métodos y propiedades por defecto que usan sus instancias (ej., <code>.push()</code> para arrays,
+                <code>.toUpperCase()</code> para strings).
+                Es posible extender estos prototipos nativos, aunque debe hacerse con extrema precaución para evitar conflictos.
+            </p>
+            <div id="output-8-3" class="console-output">
+                <strong>Salida de Consola (8.3):</strong><br>
+                Aquí se mostrarán los logs de `console.log` para la sección 8.3.
+            </div>
+            <div id="result-8-3" class="result-dom">
+                <strong>Resultados en el DOM (8.3):</strong><br>
+                <!-- Los resultados generados dinámicamente para el DOM en 8.3 aparecerán aquí. -->
+            </div>
+        </section>
+
+        <!-- Sección para 8.4 Métodos prototipo, objetos sin __proto__ -->
+        <section id="tema-8-4" class="section-box">
+            <h3>8.4 Métodos Prototipo, objetos sin __proto__</h3>
+            <p>
+                Este apartado profundiza en cómo trabajar con prototipos de manera más formal y segura,
+                utilizando métodos como <code>Object.getPrototypeOf()</code> y <code>Object.setPrototypeOf()</code>
+                para obtener y establecer el prototipo de un objeto.
+                También explora <code>Object.create()</code> para crear objetos con un prototipo específico.
+                Finalmente, veremos cómo crear "objetos diccionario" que no tienen un prototipo por defecto
+                (es decir, su prototipo es <code>null</code>), lo que los hace ideales para almacenar datos
+                sin interferencias de métodos prototípicos.
+            </p>
+            <div id="output-8-4" class="console-output">
+                <strong>Salida de Consola (8.4):</strong><br>
+                Aquí se mostrarán los logs de `console.log` para la sección 8.4.
+            </div>
+            <div id="result-8-4" class="result-dom">
+                <strong>Resultados en el DOM (8.4):</strong><br>
+                <!-- Los resultados generados dinámicamente para el DOM en 8.4 aparecerán aquí. -->
+            </div>
+        </section>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

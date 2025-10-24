@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trabajo avanzado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #fce4ec; /* Rosa claro, similar a tu imagen */
+            color: #333;
+        }
+        h1 {
+            color: #c2185b; /* Un rosa más oscuro para el título */
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .section-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #880e4f; /* Un rosa aún más oscuro para los subtítulos */
+            border-bottom: 2px solid #f8bbd0;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .code-output {
+            background-color: #e0f2f7;
+            border: 1px solid #b2ebf2;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap; /* Para que el texto se envuelva */
+        }
+        .console-note {
+            font-style: italic;
+            color: #555;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>trabajo avanzado</h1>
+    <p style="text-align: center; margin-bottom: 30px;">(F12 para ver la mayoría de los resultados en la consola)</p>
+
+    <div id="content-area">
+        <!-- Las secciones de los temas se generarán aquí o se mostrarán sus resultados -->
+        
+        <!-- Ejemplo de cómo se vería una sección, luego main.js interactuará con ella -->
+        <section id="tema-6-1" class="section-container">
+            <h2>6.1 Recursión y pila</h2>
+            <p>Aquí se demostrará la recursión, con un ejemplo de cálculo factorial y la suma de una serie de números.</p>
+            <div class="code-output" id="output-6-1"></div>
+            <p class="console-note">Ver la consola para la traza de pila de la recursión.</p>
+        </section>
+
+        <section id="tema-6-2" class="section-container">
+            <h2>6.2 Parámetros de descanso y sintaxis de propagación</h2>
+            <p>Demostración de cómo los parámetros "rest" recopilan argumentos restantes en un array y cómo el operador "spread" expande un iterable.</p>
+            <div class="code-output" id="output-6-2"></div>
+        </section>
+
+        <section id="tema-6-3" class="section-container">
+            <h2>6.3 Alcance variable, cierre</h2>
+            <p>Exploración del alcance de las variables (global, de función, de bloque) y el concepto de cierres (closures).</p>
+            <div class="code-output" id="output-6-3"></div>
+            <p class="console-note">Los cierres a menudo se demuestran mejor con interacciones que se ven en consola.</p>
+        </section>
+
+        <section id="tema-6-4" class="section-container">
+            <h2>6.4 El viejo "var"</h2>
+            <p>Análisis de las particularidades de `var`, su alcance y el hoisting, en contraste con `let` y `const`.</p>
+            <div class="code-output" id="output-6-4"></div>
+            <p class="console-note">Observa las diferencias de alcance en la consola.</p>
+        </section>
+
+        <section id="tema-6-5" class="section-container">
+            <h2>6.5 Objeto global</h2>
+            <p>Demostración del objeto global (`window` en navegadores, `global` en Node.js, `globalThis` estandarizado) y sus propiedades.</p>
+            <div class="code-output" id="output-6-5"></div>
+        </section>
+
+        <section id="tema-6-6" class="section-container">
+            <h2>6.6 Objeto de función, NFE</h2>
+            <p>Exploración de las funciones como objetos, sus propiedades y el concepto de NFE (Named Function Expression).</p>
+            <div class="code-output" id="output-6-6"></div>
+            <p class="console-note">Los detalles del objeto de función y NFE se ven mejor en la consola.</p>
+        </section>
+
+        <section id="tema-6-7" class="section-container">
+            <h2>6.7 La sintaxis de la "nueva función"</h2>
+            <p>Uso del constructor `new Function` para crear funciones dinámicamente a partir de cadenas de texto.</p>
+            <div class="code-output" id="output-6-7"></div>
+        </section>
+
+        <section id="tema-6-8" class="section-container">
+            <h2>6.8 Programación: setTimeout y setInterval</h2>
+            <p>Implementación de funciones para ejecutar código después de un retardo (`setTimeout`) o repetidamente (`setInterval`).</p>
+            <div class="code-output" id="output-6-8"></div>
+            <p class="console-note">Observa cómo aparecen los mensajes en la consola con el tiempo.</p>
+        </section>
+
+        <section id="tema-6-9" class="section-container">
+            <h2>6.9 Decoradores y reenvío, llamar/aplicar</h2>
+            <p>Ejemplos de decoradores de funciones, y el uso de `call` y `apply` para invocar funciones con un contexto específico.</p>
+            <div class="code-output" id="output-6-9"></div>
+        </section>
+
+        <section id="tema-6-10" class="section-container">
+            <h2>6.10 Vinculación de funciones</h2>
+            <p>Uso del método `bind` para crear una nueva función con un contexto (`this`) predefinido.</p>
+            <div class="code-output" id="output-6-10"></div>
+        </section>
+
+        <section id="tema-6-11" class="section-container">
+            <h2>6.11 Funciones de flecha revisadas</h2>
+            <p>Repaso de las funciones de flecha, su sintaxis concisa y cómo manejan el `this` léxico.</p>
+            <div class="code-output" id="output-6-11"></div>
+        </section>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

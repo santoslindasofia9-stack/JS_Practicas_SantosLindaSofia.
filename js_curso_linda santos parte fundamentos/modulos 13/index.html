@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prácticas JavaScript - Módulos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fce4ec; /* Fondo rosa claro */
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #ff4081; /* Rosa vibrante */
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .section-title {
+            background-color: #ff80ab; /* Rosa más suave para títulos de sección */
+            color: white;
+            padding: 15px 20px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-size: 1.5em;
+        }
+        .content-box {
+            background-color: #ffebee; /* Rosa aún más claro para el contenido */
+            border: 1px solid #f48fb1;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .console-output {
+            background-color: #e0f2f7; /* Un color diferente para la consola */
+            border: 1px solid #81d4fa;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            border-radius: 5px;
+            min-height: 50px; /* Para que sea visible incluso vacío */
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calidad del Curso</h1>
+        <p style="text-align: center;">&lt;F12&gt; para ver la mayoría de los resultados.</p>
+
+        <!-- Sección para 13.1 Módulos, introducción -->
+        <div class="section-title">13.1 Módulos, introducción</div>
+        <div class="content-box">
+            <p>Aquí se mostrarán mensajes en la consola del navegador sobre la introducción a los módulos.</p>
+            <div id="modulos-introduccion-output" class="console-output">
+                <!-- El contenido de la consola se inyectará aquí o se verá en F12 -->
+                Revisa la consola (F12) para ver los mensajes de este tema.
+            </div>
+        </div>
+
+        <!-- Sección para 13.2 Exportación e importación -->
+        <div class="section-title">13.2 Exportación e importación</div>
+        <div class="content-box">
+            <p>Se mostrarán los resultados de exportar e importar variables y funciones entre archivos.</p>
+            <div id="exportacion-importacion-output" class="console-output">
+                Revisa la consola (F12) para ver los resultados de las importaciones.
+                <br>
+                <!-- Aquí podemos mostrar un resultado directo si es posible -->
+            </div>
+        </div>
+
+        <!-- Sección para 13.3 Importaciones dinámicas -->
+        <div class="section-title">13.3 Importaciones dinámicas</div>
+        <div class="content-box">
+            <p>Este tema demuestra cómo cargar módulos de forma dinámica en tiempo de ejecución.</p>
+            <p>Se cargará un módulo auxiliar al hacer clic en el botón.</p>
+            <button id="cargarModuloBtn" style="background-color: #ff4081; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; font-size: 1em;">Cargar Módulo Dinámico</button>
+            <div id="importaciones-dinamicas-output" class="console-output" style="margin-top: 15px;">
+                <!-- Aquí se mostrarán los resultados de la importación dinámica -->
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Script principal. notar type="module" para permitir import/export -->
+    <script type="module" src="main.js"></script>
+</body>
+</html>

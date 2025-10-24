@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prácticas del Curso de JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #ffe0e6; /* Fondo rosa claro */
+            color: #333;
+        }
+        header {
+            background-color: #ffb3c1; /* Encabezado rosa más oscuro */
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #ff3366; /* Rosa fuerte para el título */
+        }
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .info-bar {
+            background-color: #fce4ec; /* Barra de información rosa muy claro */
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            color: #555;
+            text-align: center;
+        }
+        section {
+            background-color: white;
+            border: 1px solid #ffccdd; /* Borde rosa claro */
+            border-radius: 8px;
+            margin-bottom: 25px;
+            overflow: hidden; /* Para que el borde rosa del h2 se vea bien */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        section h2 {
+            background-color: #ffccdd; /* Fondo rosa para el título del tema */
+            color: #d1004a; /* Texto rosa oscuro */
+            margin: 0;
+            padding: 15px 20px;
+            font-size: 1.5em;
+            border-bottom: 1px solid #ffb3c1;
+        }
+        section .content {
+            padding: 20px;
+        }
+        .output {
+            margin-top: 15px;
+            padding: 15px;
+            border: 1px dashed #ff99bb; /* Borde punteado rosa */
+            background-color: #fff0f5; /* Fondo rosa aún más claro para el output */
+            color: #a3003c; /* Texto rosa oscuro */
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #f7f7f7;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            border: 1px solid #eee;
+        }
+        code {
+            font-family: Consolas, monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>calidad del Curso</h1>
+    </header>
+
+    <div class="container">
+        <div class="info-bar">
+            &lt;F12&gt; para ver la mayoría de los resultados.
+        </div>
+
+        <!-- 3.1 Depuración en el navegador -->
+        <section id="tema-3-1">
+            <h2>3.1 Depuración en el navegador</h2>
+            <div class="content">
+                <p>Aquí se mostrarán mensajes en la consola del navegador para depuración.</p>
+                <div class="output" id="output-3-1"></div>
+            </div>
+        </section>
+
+        <!-- 3.2 Estilo de codificación -->
+        <section id="tema-3-2">
+            <h2>3.2 Estilo de codificación</h2>
+            <div class="content">
+                <p>Ejemplo de código con buen estilo y formato.</p>
+                <pre><code id="code-3-2"></code></pre>
+                <div class="output" id="output-3-2"></div>
+            </div>
+        </section>
+
+        <!-- 3.3 Comentarios -->
+        <section id="tema-3-3">
+            <h2>3.3 Comentarios</h2>
+            <div class="content">
+                <p>Este tema se explica a través de los comentarios en el archivo `main.js`.</p>
+                <div class="output" id="output-3-3">Revisa el archivo main.js para ver los ejemplos de comentarios.</div>
+            </div>
+        </section>
+
+        <!-- 3.4 Código ninja -->
+        <section id="tema-3-4">
+            <h2>3.4 Código ninja</h2>
+            <div class="content">
+                <p>Discutimos por qué es mejor evitar el "código ninja" (código demasiado conciso y difícil de leer) en aras de la claridad.</p>
+                <pre><code id="code-3-4"></code></pre>
+                <div class="output" id="output-3-4"></div>
+            </div>
+        </section>
+
+        <!-- 3.5 Pruebas automatizadas con Mocha -->
+        <section id="tema-3-5">
+            <h2>3.5 Pruebas automatizadas con Mocha</h2>
+            <div class="content">
+                <p>Se explica cómo se integrarían pruebas unitarias. Para este ejercicio, simularemos la función y mencionaremos la idea de las pruebas.</p>
+                <div class="output" id="output-3-5"></div>
+            </div>
+        </section>
+
+        <!-- 3.6 Polipastos y transpiladores -->
+        <section id="tema-3-6">
+            <h2>3.6 Polipastos y transpiladores</h2>
+            <div class="content">
+                <p>Se explica la necesidad de polipastos (polyfills)

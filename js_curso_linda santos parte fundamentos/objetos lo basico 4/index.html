@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prácticas del Curso de JavaScript - Objetos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #e83e8c; /* Rosa similar al de tu imagen */
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .section-container {
+            background-color: #ffe6f2; /* Fondo rosa claro para las secciones */
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #d63384; /* Rosa más oscuro para los títulos de sección */
+            margin-top: 0;
+            border-bottom: 1px solid #f0b3cc;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        h3 {
+            color: #c2185b; /* Un tono más fuerte para los subtítulos */
+            margin-top: 20px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .result-box {
+            background-color: #fff;
+            border: 1px solid #f0b3cc;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        pre {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prácticas del Curso de JavaScript - Objetos: Lo Básico</h1>
+
+    <div class="section-container" id="tema-4-1">
+        <h2>4.1 Objetos</h2>
+        <p>Aquí se exploran los fundamentos de los objetos en JavaScript, cómo se crean y cómo acceder a sus propiedades.</p>
+        <h3>Resultado en Consola / HTML:</h3>
+        <div class="result-box">
+            <p>Ver la consola (F12) para los resultados de la creación y acceso a propiedades de objetos.</p>
+            <p id="output-4-1"></p>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-4-2">
+        <h2>4.2 Referencias de objetos y copia</h2>
+        <p>Este apartado muestra cómo los objetos se copian por referencia y las diferencias con los tipos primitivos.</p>
+        <h3>Resultado en Consola / HTML:</h3>
+        <div class="result-box">
+            <p>Ver la consola (F12) para entender cómo funcionan las referencias y copias de objetos.</p>
+            <p id="output-4-2"></p>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-4-3">
+        <h2>4.3 Recolección de basura</h2>
+        <p>Se explica el concepto de recolección de basura en JavaScript y cómo maneja la memoria de los objetos.</p>
+        <h3>Resultado en Consola / HTML:</h3>
+        <div class="result-box">
+            <p>Este tema es conceptual; la evidencia se muestra a través de la comprensión de cómo el motor de JS libera memoria.</p>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-4-4">
+        <h2>4.4 Métodos de objeto, "this"</h2>
+        <p>Exploración de los métodos dentro de los objetos y el uso de la palabra clave `this`.</p>
+        <h3>Resultado en Consola / HTML:</h3>
+        <div class="result-box">
+            <p>Ver la consola (F12) para los resultados de la ejecución de métodos y el valor de `this`.</p>
+            <p id="output-4-4"></p>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-4-5">
+        <h2>4.5 Constructor, operador "new"</h2>
+        <p>Aprender a usar funciones constructoras y el operador `new` para crear múltiples objetos similares.</p>
+        <h3>Resultado en Consola / HTML:</h3>
+        <div class="result-box">
+            <p>Ver la consola (F12) para los objetos creados con el constructor y el operador `new`.</p>
+            <p id="output-4-5"></p>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-4-6">
+        <h2>4.6 Encadenamiento opcional "?."</h2>
+        <p>Uso del operador de encadenamiento opcional para acceder a propiedades de objetos anidados de forma segura.</p>
+        <h3>Resultado en Consola / HTML:</h3>
+        <div class="result-box">
+            <p>Ver la consola (F12) para demostrar cómo `?.` evita errores.</p>
+            <p id="output-4-6"></p>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-4-7">
+        <h2>4.7 Tipo de símbolo</h2>
+        <p>Introducción al tipo de dato `Symbol` para crear identificadores únicos de propiedades de objetos.</p>
+        <h3>Resultado en Consola / HTML:</h3>
+        <div class="result-box">
+            <p>Ver la consola (F12) para ejemplos de propiedades con `Symbol`.</p>
+            <p id="output-4-7"></p>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-4-8">
+        <h2>4.8 Conversión de objeto a primitivo</h2>
+        <p>Cómo los objetos se convierten a tipos primitivos cuando se realizan operaciones con ellos.</p>
+        <h3>Resultado en Consola / HTML:</h3>
+        <div class="result-box">
+            <p>Ver la consola (F12) para los resultados de las conversiones de objetos a primitivos.</p>
+            <p id="output-4-8"></p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
